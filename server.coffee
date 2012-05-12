@@ -14,7 +14,7 @@ app.get '/', (req, res) ->
       access_token: simperium.access_token
 
 simperium_auth = (cb) ->
-  url = "https://auth.simperium.com/1/"+process.env.SIMPERIUM_APP_ID+"/authorize/"
+  url = "https://auth.simperium.com/1/#{process.env.SIMPERIUM_APP_ID}/authorize/"
   post_data = 
     username: process.env.SIMPERIUM_USERNAME
     password: process.env.SIMPERIUM_PASSWORD
